@@ -15,6 +15,7 @@
 		0E63B62C2B752AB600A0CF97 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E63B62A2B752AB600A0CF97 /* LaunchScreen.storyboard */; };
 		0E63B6342B75316500A0CF97 /* FoodListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E63B6332B75316500A0CF97 /* FoodListController.swift */; };
 		0E63B6362B75317D00A0CF97 /* FirstContactController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E63B6352B75317D00A0CF97 /* FirstContactController.swift */; };
+		0E675C512B767A86002AD0F9 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E675C502B767A86002AD0F9 /* Food.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		0E63B62D2B752AB600A0CF97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0E63B6332B75316500A0CF97 /* FoodListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListController.swift; sourceTree = "<group>"; };
 		0E63B6352B75317D00A0CF97 /* FirstContactController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstContactController.swift; sourceTree = "<group>"; };
+		0E675C502B767A86002AD0F9 /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				0E63B62D2B752AB600A0CF97 /* Info.plist */,
 				0E63B6332B75316500A0CF97 /* FoodListController.swift */,
 				0E63B6352B75317D00A0CF97 /* FirstContactController.swift */,
+				0E675C502B767A86002AD0F9 /* Food.swift */,
 			);
 			path = MonRestoAsiatiaue;
 			sourceTree = "<group>";
@@ -149,6 +152,7 @@
 				0E63B6222B752AB500A0CF97 /* SceneDelegate.swift in Sources */,
 				0E63B6362B75317D00A0CF97 /* FirstContactController.swift in Sources */,
 				0E63B6342B75316500A0CF97 /* FoodListController.swift in Sources */,
+				0E675C512B767A86002AD0F9 /* Food.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
