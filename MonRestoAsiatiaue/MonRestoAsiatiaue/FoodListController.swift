@@ -38,11 +38,14 @@ class FoodListController: UIViewController {
     
     func setupViews() {
         for index in 0..<myImageViews.count {
-            let iv = myImageViews[index]
-            let imageString = foods[index].image
-            let image = UIImage(named: imageString)
-            iv.image = image
-            iv.contentMode = .scaleAspectFill
+            if let iv = myImageViews.first(where: {$0.tag == index}) {
+                let imageString = foods[index].image
+                let image = UIImage(named: imageString)
+                iv.image = image
+                iv.contentMode = .scaleAspectFill
+            }
+            // let iv = myImageViews[index]
+           
         }
     }
     
@@ -51,19 +54,25 @@ class FoodListController: UIViewController {
             iv.layer.cornerRadius = iv.frame.height / 2
             iv.layer.borderColor = UIColor.label.cgColor
             iv.layer.borderWidth = 2
-            
+            iv.isUserInteractionEnabled = true
         }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if let touch = touches.first {
+            if let iv = touch.view as? UIImageView {
+                let food = foods[iv.tag]
+                performSegue(withIdentifier: "Detail", sender: food)
+            }
+        }
     }
-    */
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "Detail" {
+            if let next = segue.destination as? DetailController {
+                next.food = sender as? Food
+            }
+        }
+    }
 
 }
